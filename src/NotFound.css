@@ -1,0 +1,49 @@
+.notfound-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f8fafc 100%);
+}
+
+.notfound-content {
+  text-align: center;
+  background: #fff;
+  padding: 40px 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(60, 72, 88, 0.12);
+  max-width: 400px;
+}
+
+.notfound-icon {
+  font-size: 3rem;
+  color: #6366f1;
+  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 4rem;
+  margin: 0;
+  color: #6366f1;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 8px 0 16px 0;
+  color: #334155;
+}
+
+p {
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+.p-button-info {
+  background: #6366f1;
+  border: none;
+}
+
+.p-button-info:hover {
+  background: #4f46e5;
+}
