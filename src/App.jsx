@@ -1,26 +1,14 @@
-import { Button } from "primereact/button";
-import React from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
-import NotFound from "./NotFound.jsx";
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import NotFound from './Pages/NotFound/NotFound'
 
 export default function App() {
-  const navigation = useNavigate();
+  const router=createBrowserRouter([
+    {path:"/",element:<>Start Bulid From Here </>},
+    {path:"*",element:<NotFound/>}
+  ])
   return (
     <>
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Button
-              onClick={() => {
-                navigation("/osama");
-              }}
-              label="Osama"
-            />
-          }
-        />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+    <RouterProvider router={router}/>
     </>
-  );
+  )
 }
