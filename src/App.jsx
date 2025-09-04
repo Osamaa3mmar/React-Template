@@ -1,10 +1,18 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import NotFound from './Pages/NotFound/NotFound'
+import MainLayout from './Layouts/MainLayout/MainLayout'
+import HomePage from './Pages/HomePage/HomePage'
 
 export default function App() {
   const router=createBrowserRouter([
-    {path:"/",element:<>Start Bulid From Here </>},
-    {path:"*",element:<NotFound/>}
+    //MainLayout
+    {path:"/",element:<MainLayout/>,children:[
+      {path:"",index:true,element:<HomePage/>},
+      {path:"home",element:<HomePage/>},
+    ]},
+
+
+    //NotFound Page
+    {path:"*",element:<>Your Not Found Page Here</>}
   ])
   return (
     <>
