@@ -1,14 +1,14 @@
-import { addEdge, applyEdgeChanges, applyNodeChanges, ReactFlow } from '@xyflow/react';
+import { addEdge, applyEdgeChanges, applyNodeChanges, Background, ReactFlow } from '@xyflow/react';
 import React, { useCallback, useState } from 'react'
 const initialNodes = [
-  { id: 'n1', position: { x: 0, y: 0 }, data: { label: 'Node 1' } },
-  { id: 'n2', position: { x: 0, y: 100 }, data: { label: 'Node 2' } },
-  { id: 'n3', position: { x: 0, y: 100 }, data: { label: 'Node 3' } },
+  
 ];
-const initialEdges = [{ id: 'n1-n2', source: 'n1', target: 'n2' }];
+const initialEdges = [];
 export default function HomePage() {
   const [nodes, setNodes] = useState(initialNodes);
   const [edges, setEdges] = useState(initialEdges);
+  console.log(edges)
+  console.log(nodes)
   const onNodesChange = useCallback(
     (changes) => setNodes((nodesSnapshot) => applyNodeChanges(changes, nodesSnapshot)),
     [],
@@ -23,6 +23,7 @@ export default function HomePage() {
   );
   return (
     <div className="w-full flex-1  ">
+
 <ReactFlow
         nodes={nodes}
         edges={edges}
@@ -30,7 +31,11 @@ export default function HomePage() {
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
         fitView
-      />
+        attributionPosition={"hidden"} // هذا يخفي توقيع React Flow
+
+      >
+        <Background/>
+      </ReactFlow>
     </div>
   )
 }

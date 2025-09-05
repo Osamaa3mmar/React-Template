@@ -52,7 +52,7 @@ if(window.scrollY>600&& !prev){
           <a className=" rounded-md font-medium cursor-pointer">{t("home")}</a>
         </li>
         <li>
-          <a className=" rounded-md font-medium bg-neutral text-white cursor-pointer">{t("home")}</a>
+          <a className=" rounded-md font-medium btn-sm btn btn-neutral text-white cursor-pointer">{t("home")}</a>
         </li>
       </ul>
 
