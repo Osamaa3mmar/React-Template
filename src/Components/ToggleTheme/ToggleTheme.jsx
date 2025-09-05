@@ -8,7 +8,7 @@ export default function ToggleTheme() {
 
   return (
   <div>
-<button className="btn-primary btn btn-sm" popoverTarget="popover-1" style={{ anchorName: "--anchor-1" }}>
+<button className="btn-neutral btn btn-sm" popoverTarget="popover-1" style={{ anchorName: "--anchor-1" }}>
     <TbColorFilter size={20}/>
 </button>
 
