@@ -37,7 +37,7 @@ if(window.scrollY>600&& !prev){
 
 
   return (
-    <div className={`navbar shadow-md sticky top-0 backdrop-blur-md m-auto border-b border-primary/40 px-10 transition-all duration-600 ${nav?"w-[50%] mx-auto rounded-2xl border top-2":"w-[100%]"}`}>
+    <div className={`navbar shadow-md sticky top-0 backdrop-blur-md m-auto border-b border-primary/40 px-10 transition-all duration-600 ${nav?"w-[50%] mx-auto rounded-2xl border top-4":"w-[100%]"}`}>
       <div className="navbar-start">
         <button className="btn btn-ghost btn-lg   normal-case font-semibold tracking-wide   hover:shadow-md transition-all duration-200">
           {t("logo")}
@@ -46,13 +46,13 @@ if(window.scrollY>600&& !prev){
 
       <ul className=" hidden rounded-box lg:flex dropdown menu menu-horizontal bg-transparent navbar-center gap-6">
         <li>
-          <a className=" rounded-md font-medium cursor-pointer">{t("home")}</a>
+          <a className=" rounded-md font-medium  cursor-pointer">{t("home")}</a>
         </li>
         <li>
           <a className=" rounded-md font-medium cursor-pointer">{t("home")}</a>
         </li>
         <li>
-          <a className=" rounded-md font-medium cursor-pointer">{t("home")}</a>
+          <a className=" rounded-md font-medium bg-neutral text-white cursor-pointer">{t("home")}</a>
         </li>
       </ul>
 
