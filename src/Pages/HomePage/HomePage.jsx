@@ -1,14 +1,26 @@
 import { addEdge, applyEdgeChanges, applyNodeChanges, Background, ReactFlow } from '@xyflow/react';
 import React, { useCallback, useState } from 'react'
+import SimpleNode from '../../Components/BoardNodes/SimpleNode';
 const initialNodes = [
-  
+  {
+    id: 'node-1',
+    type: 'simple',
+    position: { x: 0, y: 0 },
+    data: { value: 123 },
+  }, {
+    id: 'node-2',
+    type: 'simple',
+    position: { x: 110, y: 0 },
+    data: { value: 123 },
+  },
 ];
 const initialEdges = [];
 export default function HomePage() {
   const [nodes, setNodes] = useState(initialNodes);
   const [edges, setEdges] = useState(initialEdges);
-  console.log(edges)
-  console.log(nodes)
+  const nodeTypes={
+    simple:SimpleNode
+  }
   const onNodesChange = useCallback(
     (changes) => setNodes((nodesSnapshot) => applyNodeChanges(changes, nodesSnapshot)),
     [],
@@ -30,6 +42,7 @@ export default function HomePage() {
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}
+        nodeTypes={nodeTypes}
         fitView
         attributionPosition={"hidden"} // هذا يخفي توقيع React Flow
 
