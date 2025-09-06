@@ -1,4 +1,4 @@
-import { addEdge, applyEdgeChanges, applyNodeChanges, Background, ReactFlow } from '@xyflow/react';
+import { addEdge, applyEdgeChanges, applyNodeChanges, Background, Controls, ReactFlow } from '@xyflow/react';
 import React, { useCallback, useState } from 'react'
 import SimpleNode from '../../Components/BoardNodes/SimpleNode';
 const initialNodes = [
@@ -14,6 +14,7 @@ const initialNodes = [
     data: { value: 123 },
   },
 ];
+
 const initialEdges = [];
 export default function HomePage() {
   const [nodes, setNodes] = useState(initialNodes);
@@ -21,6 +22,8 @@ export default function HomePage() {
   const nodeTypes={
     simple:SimpleNode
   }
+  // console.log(nodes)
+  // console.log(edges)
   const onNodesChange = useCallback(
     (changes) => setNodes((nodesSnapshot) => applyNodeChanges(changes, nodesSnapshot)),
     [],
@@ -48,6 +51,9 @@ export default function HomePage() {
 
       >
         <Background/>
+<Controls
+  className="!bg-primary !rounded-xl !p-2 [&>button]:!bg-white [&>button]:!text-black [&>button:hover]:!bg-gray-200"
+/>
       </ReactFlow>
     </div>
   )
