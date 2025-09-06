@@ -15,6 +15,7 @@ export const LanguageProvider=({children})=>{
     i18n.changeLanguage(lang);
     document.documentElement.dir=lang=="en"?"ltr":"rtl";
     localStorage.setItem("lang",lang);
+    setCurrent(lang);
   };
 
 

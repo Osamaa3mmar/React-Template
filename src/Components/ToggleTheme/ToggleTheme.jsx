@@ -15,7 +15,7 @@ export default function ToggleTheme() {
 <ul className=" dropdown-center  dropdown menu  w-40 max-h-[400px] overflow-auto flex-nowrap rounded-box bg-base-100 shadow-sm"
   popover="auto" id="popover-1" style={{ positionAnchor: "--anchor-1" } /* as React.CSSProperties */ }>
   {themes?.map((theme,index)=>{
-        return <li  key={index} className={currentTheme==theme?" bg-gray-100/10 rounded-md":null}  onClick={()=>{changeTheme(theme)}}>
+        return <li  key={index} className={currentTheme==theme?" text-white rounded-md bg-neutral":null}  onClick={()=>{changeTheme(theme)}}>
           <a>{theme}</a></li>
     })}
 </ul>
