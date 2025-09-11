@@ -5,7 +5,8 @@ import Navbar from "../../Components/Navbar/Navbar";
 export default function MainLayout() {
   return (
     <div className="flex flex-col h-screen">
-      <Navbar />
+      {/* موجود ناف بار جاهزه اذا بدك شيل الكومنت عنها  */}
+      {/* <Navbar /> */}
       <Outlet />
     </div>
   );
