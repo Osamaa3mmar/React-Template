@@ -10,11 +10,11 @@ export const ThemeContextProvidor=({children})=>{
         //هذا فكرتو انو يغير الثيم لكل اشي لا تستخدمو في فنكشنات ثانية بتستخدمو 
         const setBodyTheme=(theme)=>{
             document.documentElement.setAttribute("data-theme",theme);
-            
         }
         //هذا السطر بيجيبلك اذا المستخدم دخل اول مرة للموقع هل هو باي ديفولت اسود او لا 
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const [current,setCurrent]=useState(prefersDark?"dark":"light");
+   
     const changeTheme=(theme)=>{
     setCurrent(theme);
     setBodyTheme(theme);
@@ -29,7 +29,6 @@ export const ThemeContextProvidor=({children})=>{
     const themes = [
   "light",
   "dark",
-  "silk"
 ];
 
 
